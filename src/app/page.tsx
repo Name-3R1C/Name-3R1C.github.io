@@ -1,6 +1,6 @@
 import Container from "@/app/_components/container";
 import { HeroPost } from "@/app/_components/hero-post";
-import { Intro } from "@/app/_components/intro";
+import { About } from "./_components/about";
 import { MoreStories } from "@/app/_components/more-stories";
 import { getAllPosts } from "@/lib/api";
 import { Navbar } from "./_components/navbar";
@@ -16,7 +16,7 @@ export default function Index() {
     <main>
       <Container>
         <Navbar />
-        {/* <Intro /> */}
+        <About />
         {/* <HeroPost
           title={heroPost.title}
           coverImage={heroPost.coverImage}

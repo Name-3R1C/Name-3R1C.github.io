@@ -16,7 +16,7 @@ export function Navbar() {
 
   return (
     <nav className="w-full flex items-center justify-between py-4 fixed top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh] left-0">
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-4">
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-8">
         <Link href="/" legacyBehavior>
           <a
             className="flex items-center gap-2"
@@ -24,7 +24,7 @@ export function Navbar() {
               setActive('');
               window.scrollTo(0, 0);
             }}>
-            User Name
+            <h1 className="text-5xl font-bold uppercase">Eric Feng</h1>
           </a>
         </Link>
 
@@ -79,6 +79,7 @@ export function Navbar() {
         </div>
       </div>
 
+      {/* Mobile */}
       {toggle && (
         <div className="sm:hidden flex flex-col items-center bg-flashWhite w-full absolute top-full left-0 py-4">
           {navLinks.map((nav: NavLink) => (
