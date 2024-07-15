@@ -1,8 +1,5 @@
 .switch {
   all: unset;
-  position: absolute;
-  right: 20px;
-  top: 70px;
   display: inline-block;
   color: currentColor;
   border-radius: 50%;
@@ -15,7 +12,6 @@
 }
 
 [data-mode="system"] .switch::after {
-  position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
