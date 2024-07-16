@@ -10,7 +10,7 @@ interface NavLink {
   title: string;
 }
 
-export function Navbar() {
+const Navbar = () => {
   const [active, setActive] = useState<string>('');
   const [toggle, setToggle] = useState<boolean>(false);
 
@@ -99,3 +99,5 @@ export function Navbar() {
     </nav>
   );
 }
+
+export default Navbar;
