@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from 'next/link';
-import { navLinks } from './constants';
+import { navLinks } from '../data/menu';
 import { ThemeSwitcher } from "./theme-switcher";
 
 interface NavLink {

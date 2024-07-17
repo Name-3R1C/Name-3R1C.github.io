@@ -1,33 +1,15 @@
 import Container from "@/app/_components/container";
 import About from "./_components/about";
 import Navbar from "./_components/navbar";
-import { HeroPost } from "@/app/_components/hero-post";
-import { MoreStories } from "@/app/_components/more-stories";
-import { getAllPosts } from "@/lib/api";
 import Projects from "./_components/projects";
 
 export default function Index() {
-  const allPosts = getAllPosts();
-
-  const heroPost = allPosts[0];
-
-  const morePosts = allPosts.slice(1);
-
   return (
     <main>
       <Container>
         <Navbar />
         <About />
         <Projects />
-        {/* <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
       </Container>
     </main>
   );
