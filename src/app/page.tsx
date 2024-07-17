@@ -15,7 +15,7 @@ export default function Index() {
 
   return (
     <main>
-      {/* <Container> */}
+      <Container>
         <Navbar />
         <About />
         {/* <HeroPost
@@ -27,7 +27,7 @@ export default function Index() {
           excerpt={heroPost.excerpt}
         />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
-      {/* </Container> */}
+      </Container>
     </main>
   );
 }

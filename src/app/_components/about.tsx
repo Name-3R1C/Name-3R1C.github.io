@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 const About = () => {
   return (
-    <section id="section-resume-biography-3" className="pt-[12vh] py-12 bg-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="section-resume-biography-3" className="pt-[12vh] py-12 ">
+      <div className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-7">
         <div className="flex flex-col lg:flex-row lg:space-x-8">
           {/* Headshot pic */}
-          <div className="flex-shrink-0 mb-8 lg:mb-0">
+          <div className="flex-shrink-0 mb-8 lg:mb-0 flex flex-col items-center pr-3">
             <Image
               className="rounded-full object-cover"
               src="/assets/headshot.png"
@@ -15,15 +15,23 @@ const About = () => {
               width={200}
               height={200}
             />
+            <p className="text-lg text-gray-700 pt-5">
+            Full-Stack Web Developer
+            </p>
+            <p className="text-lg text-gray-700 pt-1">
+            Problem Solver
+            </p>
+            <p className="text-lg text-gray-700 pt-1">
+            Mathematics
+            </p>
           </div>
+
           {/* bio */}
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
               About Me
             </h2>
-            <p className="text-lg text-gray-700 mb-4">
-            💻 Full-Stack Web Developer | Problem Solver | Mathematics
-            </p>
+
             <p className="text-lg text-gray-700 mb-4">
             Enthusiastic and results-driven Full-Stack Web Developer with a solid background in mathematics and a passion for creating robust, client-focused web applications. Experienced in the complete development lifecycle, from research and planning to design, implementation, and testing. Skilled in using JavaScript, Ruby, HTML, CSS, and various testing frameworks.
             </p>
