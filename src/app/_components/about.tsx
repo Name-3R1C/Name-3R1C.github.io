@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 const About = () => {
   return (
@@ -55,6 +54,19 @@ const About = () => {
                 </svg>
                 Download CV
               </a>
+            </div>
+            <div>
+              <div className='section-subheading mb-3'>Education</div>
+              <ul>
+                <li>
+                  <p>Diploma of Web Development</p>
+                  <p>Lighthouse Labs</p>
+                </li>
+                <li>
+                  <p>BSc Mathmatics</p>
+                  <p>Simon Fraser University</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

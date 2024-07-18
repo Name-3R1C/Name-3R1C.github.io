@@ -15,7 +15,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
 
   return (
-    <nav className="w-full flex items-center justify-between py-4 fixed top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh] left-0">
+    <nav className="w-full flex items-center justify-between py-4 fixed top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh] left-0 border-b bg-white">
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-8">
         <Link href="/" legacyBehavior>
           <a
