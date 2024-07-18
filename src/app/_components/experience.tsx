@@ -1,29 +1,51 @@
-import React from 'react';
-import { experiences } from '../data/experience';
+// components/Timeline.js
+import Image from "next/image";
 
-const Experience = () => {
+interface Experience {
+  title: string;
+  company: string;
+  duration: string;
+  description: string;
+  icon: string; // Assuming you have an icon property
+}
+
+interface TimelineProps {
+  experiences: Experience[];
+}
+
+const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
   return (
-    <section id="experience" className="bg-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-gray-900 mb-8">Experience</h2>
-        <div className="grid grid-cols-1 gap-8">
-          {experiences.map((exp, index) => (
-            <div key={index} className="border-l-4 border-primary-500 pl-4">
-              <h3 className="text-2xl font-semibold text-gray-900">{exp.title}</h3>
-              <h4 className="text-xl text-primary-500">{exp.company}</h4>
-              <p className="text-gray-600">{exp.duration}</p>
-              <p className="mt-2 text-gray-700">{exp.description}</p>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {exp.techStack.map((tech, idx) => (
-                  <span key={idx} className="px-2 py-1 bg-primary-100 text-primary-800 rounded-full text-sm font-medium">{tech}</span>
-                ))}
-              </div>
+    <div className="mt-20 flex flex-col items-center">
+      <div className="relative w-full">
+        {/* Vertical line */}
+        <div className="absolute left-1/2 w-1 h-full bg-gray-300 transform -translate-x-1/2"></div>
+        {experiences.map((exp, index) => (
+          <div
+            key={index}
+            className={`vertical-timeline-element flex justify-between items-center w-full my-8 ${
+              index % 2 === 0 ? "flex-row-reverse" : "flex-row"
+            }`}
+          >
+            {/* <div className="vertical-timeline-element-icon w-12 h-12 rounded-full bg-gray-800 flex justify-center items-center">
+              <Image
+                src={exp.image}
+                alt={exp.title}
+                width={30}
+                height={30}
+                className="object-contain"
+              />
+            </div> */}
+            <div className="vertical-timeline-element-content bg-gray-100 p-4 rounded-lg shadow-lg w-1/2 transform -translate-x-1/2">
+              <div className="arrow w-3 h-3 bg-gray-100 transform rotate-45 absolute left-1/2 -translate-x-1/2 -mt-1"></div>
+              <h3 className="text-xl font-bold text-gray-900">{exp.title}</h3>
+              <p className="text-lg font-semibold text-gray-700">{exp.company}</p>
+              {/* <span className="block text-md font-medium text-gray-500">{exp.date}</span> */}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Experience;
+export default Timeline;

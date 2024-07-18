@@ -1,4 +1,4 @@
-export const experiences = [
+const experiences = [
   {
     title: "Full-Stack Developer Intern",
     company: "FYMAB Inc.",
@@ -14,3 +14,5 @@ export const experiences = [
     techStack: ["HTML", "CSS", "JavaScript", "React", "Node.js"]
   }
 ];
+
+export default experiences;
