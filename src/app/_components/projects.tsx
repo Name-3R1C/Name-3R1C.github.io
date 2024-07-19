@@ -3,14 +3,14 @@ import { projects } from '../data/projects';
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-12 bg-neutral-50">
+    <div className="py-12 bg-neutral-50 dark:bg-slate-800">
       <h1 className="hover:text-shadow-3 m-0 font-heading text-[clamp(3rem,_10vw,_1rem)] font-black tracking-[-0.2rem] transition-all duration-300 text-center pb-4">
         Projects
       </h1>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {projects.map((project) => (
-            <div key={project.id} className="p-6 bg-white rounded-lg shadow-md">
+            <div key={project.id} className="p-6 bg-white rounded-lg shadow-md dark:bg-slate-900">
               <div className="relative w-full h-40 mb-4">
                 <Image
                   src={project.image}
@@ -24,7 +24,7 @@ const Projects = () => {
               <p className="text-gray-700 mb-4">{project.description}</p>
               <div className="flex space-x-2 mb-4">
                 {project.techStack.slice(0, 5).map((tech) => (
-                  <span key={tech} className="px-2 py-1 bg-gray-200 text-gray-600 rounded">{tech}</span>
+                  <span key={tech} className="px-2 py-1 bg-gray-200 text-gray-600 rounded dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600">{tech}</span>
                 ))}
               </div>
               <a
@@ -51,7 +51,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -23,5 +23,12 @@ export const projects = [
     techStack: ['React', 'Express', 'Node.js', 'PostgreSQL', 'Sass'],
     githubLink: 'https://github.com/Name-3R1C/scheduler',
   },
-  
+  {
+    id: 4,
+    title: 'Interview Scheduler',
+    description: 'An SPA for booking student-mentor interviews from 12 PM to 5 PM, Monday to Friday. Users can manage appointments with a React front end and API integration.',
+    image: '/assets/screenshots/Scheduler.png',
+    techStack: ['React', 'Express', 'Node.js', 'PostgreSQL', 'Sass'],
+    githubLink: 'https://github.com/Name-3R1C/scheduler',
+  },
 ];

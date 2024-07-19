@@ -26,7 +26,7 @@ const Experience = () => {
               {/* Job Details */}
               <div className={`w-1/2 ${index % 2 === 0 ? 'pl-4' : 'pr-4'} flex items-center`}>
                 <div className="timeline-box">
-                  <h4 className="timeline-subtitle text-md md:text-xl text-slate-600 dark:text-slate-400 pb-1">{exp.company}</h4>
+                  <h4 className="timeline-subtitle text-md md:text-xl text-slate-600 dark:text-slate-400 pb-1 font-semibold">{exp.company}</h4>
                   <p className="timeline-desc">{exp.description}</p>
                 </div>
               </div>

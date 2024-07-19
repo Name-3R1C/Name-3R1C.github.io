@@ -2,13 +2,13 @@ import Container from "@/app/_components/container";
 
 export function Footer() {
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200 dark:bg-slate-800">
+    <footer className="bg-neutral-50 border-t border-neutral-200 dark:bg-slate-800 dark:border-gray-600">
       <Container>
         <div className="py-8 flex flex-col lg:flex-row items-center">
           <h1 className="hover:text-shadow-3 m-0 font-heading text-[clamp(3rem,_10vw,_1rem)] font-black tracking-[-0.2rem] transition-all duration-300 text-center pb-4">
             Get In Touch
           </h1>
-          <p>Feel free to connect with me</p>
+          <p className="pb-4">Feel free to connect with me</p>
           <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
             <ul className="home-about-social-links flex space-x-4">
               <li>
