@@ -25,10 +25,10 @@ export const projects = [
   },
   {
     id: 4,
-    title: 'Interview Scheduler',
-    description: 'An SPA for booking student-mentor interviews from 12 PM to 5 PM, Monday to Friday. Users can manage appointments with a React front end and API integration.',
-    image: '/assets/screenshots/Scheduler.png',
-    techStack: ['React', 'Express', 'Node.js', 'PostgreSQL', 'Sass'],
-    githubLink: 'https://github.com/Name-3R1C/scheduler',
+    title: 'Tweeter',
+    description: 'A simple, single-page Twitter clone that allows users to post short messages (tweets) and view them in a chronological order.',
+    image: '/assets/screenshots/tweeter.png',
+    techStack: ['Express', 'Body-parser', 'Node.js', 'jQuery', 'AJAX'],
+    githubLink: 'https://github.com/Name-3R1C/tweeter',
   },
 ];
