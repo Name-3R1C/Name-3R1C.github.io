@@ -1,26 +1,42 @@
-// components/Experience.tsx
 import React from 'react';
 import experiences from '../data/experience';
 
 const Experience = () => {
   return (
     <div className="my-12 px-4">
-      <h1 className="hover:text-shadow-3 m-0 font-heading text-[clamp(3rem,10vw,4.5rem)] font-black tracking-[-0.2rem] transition-all duration-300">Experience</h1>
-      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-        {experiences.map((experience, index) => (
-          <li key={index} className="timeline-item dark:text-white">
-            <time className={`timeline-box ${index % 2 === 0 ? 'md:timeline-start' : 'md:timeline-end'} timeline-end`}>
-              {experience.duration}
-            </time>
-            <div className={`timeline-box ${index % 2 === 0 ? 'md:timeline-end' : 'md:timeline-start'} timeline-start`}>
-              <h2 className="timeline-title text-lg md:text-3xl">{experience.title}</h2>
-              <h4 className="timeline-subtitle text-md md:text-xl text-slate-600 dark:text-slate-400">{experience.company}</h4>
-              <p className="timeline-desc">{experience.description}</p>
-            </div>
-            <hr className="bg-primary" />
-          </li>
-        ))}
-      </ul>
+      <h1 className="hover:text-shadow-3 m-0 font-heading text-[clamp(3rem,_10vw,_4.5rem)] font-black tracking-[-0.2rem] transition-all duration-300">
+        Experience
+      </h1>
+      <div className="relative">
+        {/* Vertical Line for Timeline */}
+        <div className="absolute left-1/2 top-0 w-px h-full bg-gray-300 transform -translate-x-1/2"></div>
+
+        <ul className="relative">
+          {experiences.map((exp, index) => (
+            <li
+              key={index}
+              className={`flex items-start mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} relative`}
+            >
+              {/* Time Element */}
+              <div className={`w-1/2 flex flex-col ${index % 2 === 0 ? 'pr-4 items-end' : 'pl-4 items-start'} space-y-2`}>
+                <time className="timeline-box">{exp.time}</time>
+                <h2 className="timeline-title">{exp.title}</h2>
+              </div>
+              
+              {/* Job Details */}
+              <div className={`w-1/2 ${index % 2 === 0 ? 'pl-4' : 'pr-4'} flex items-center`}>
+                <div className="timeline-box">
+                  <h4 className="timeline-subtitle text-md md:text-xl text-slate-600 dark:text-slate-400 ">{exp.company}</h4>
+                  <p className="timeline-desc">{exp.description}</p>
+                </div>
+              </div>
+              
+              {/* Horizontal Line */}
+              <hr className="bg-primary absolute inset-x-0 bottom-0" />
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
