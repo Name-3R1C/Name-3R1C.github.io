@@ -15,7 +15,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
 
   return (
-    <nav className="w-full flex items-center justify-between py-4 fixed top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh] left-0 border-b bg-white dark:bg-slate-800 dark:border-gray-600">
+    <nav className="w-full flex items-center justify-between fixed top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh] left-0 border-b bg-white dark:bg-slate-800 dark:border-gray-600">
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-8">
         <Link href="/" legacyBehavior>
           <a
@@ -24,7 +24,9 @@ const Navbar = () => {
               setActive('');
               window.scrollTo(0, 0);
             }}>
-            <h1 className="text-5xl font-bold uppercase">Eric Feng</h1>
+            <h1 className="hover:text-shadow-3 m-0 font-heading text-[clamp(3rem,_10vw,_1rem)] font-black tracking-[-0.2rem] transition-all duration-300 text-center pb-4">
+              Eric Feng
+            </h1>
           </a>
         </Link>
 

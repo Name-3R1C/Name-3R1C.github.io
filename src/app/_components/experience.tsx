@@ -3,7 +3,7 @@ import experiences from '../data/experience';
 
 const Experience = () => {
   return (
-    <div className="my-12 px-4">
+    <section id="experience" className="my-12 px-4 pt-20 -mt-20">
       <h1 className="hover:text-shadow-3 m-0 font-heading text-[clamp(3rem,_10vw,_1rem)] font-black tracking-[-0.2rem] transition-all duration-300 text-center pb-4">
         Experience
       </h1>
@@ -34,7 +34,7 @@ const Experience = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

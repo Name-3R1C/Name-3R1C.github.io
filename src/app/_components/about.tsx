@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <section id="section-resume-biography-3" className="pt-[12vh] py-12 ">
+    <section id="about" className="pt-[12vh] py-12 ">
       <div className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-7">
         <div className="flex flex-col lg:flex-row lg:space-x-8">
           {/* Headshot pic */}
@@ -61,7 +61,7 @@ const About = () => {
               <h2 className="text-xl font-extrabold text-gray-900 mb-4 dark:text-slate-400">
                 Education
               </h2>
-              <ul className="flex flex-col md:flex-row md:space-x-4">
+              <ul className="flex flex-col md:flex-row md:space-x-4 gap-6">
                 <li className="flex items-start">
                   <svg 
                     className="flex-shrink-0 w-5 h-5 me-2" 

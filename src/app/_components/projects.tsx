@@ -3,7 +3,7 @@ import { projects } from '../data/projects';
 
 const Projects = () => {
   return (
-    <div className="py-12 bg-neutral-50 dark:bg-slate-800">
+    <section id="projects" className="py-12 dark:bg-slate-800 pt-20 -mt-20">
       <h1 className="hover:text-shadow-3 m-0 font-heading text-[clamp(3rem,_10vw,_1rem)] font-black tracking-[-0.2rem] transition-all duration-300 text-center pb-4">
         Projects
       </h1>
@@ -22,7 +22,7 @@ const Projects = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
               <p className="text-gray-700 mb-4">{project.description}</p>
-              <div className="flex space-x-2 mb-4">
+              <div className="flex flex-wrap mb-4 gap-2">
                 {project.techStack.slice(0, 5).map((tech) => (
                   <span key={tech} className="px-2 py-1 bg-gray-200 text-gray-600 rounded dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600">{tech}</span>
                 ))}
@@ -51,7 +51,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
