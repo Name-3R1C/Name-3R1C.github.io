@@ -2,7 +2,7 @@ import Container from "@/app/_components/container";
 
 export function Footer() {
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200 dark:bg-slate-800 dark:border-gray-600">
+    <footer id="contact" className="bg-neutral-50 border-t border-neutral-200 dark:bg-slate-800 dark:border-gray-600">
       <Container>
         <div className="py-8 flex flex-col lg:flex-row items-center justify-evenly">
           <h1 className="hover:text-shadow-3 m-0 font-heading text-[clamp(3rem,_10vw,_1rem)] font-black tracking-[-0.2rem] transition-all duration-300 text-center pb-4">
