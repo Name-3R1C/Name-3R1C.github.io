@@ -4,11 +4,11 @@ export function Footer() {
   return (
     <footer id="contact" className="bg-neutral-50 border-t border-neutral-200 dark:bg-slate-800 dark:border-gray-600">
       <Container>
-        <div className="py-8 flex flex-col lg:flex-row items-center justify-evenly">
-          <h1 className="hover:text-shadow-3 m-0 font-heading text-[clamp(3rem,_10vw,_1rem)] font-black tracking-[-0.2rem] transition-all duration-300 text-center pb-4">
+        <div className="py-8 flex flex-col lg:flex-row items-center justify-evenly gap-4">
+          <h1 className="hover:text-shadow-3 m-0 font-heading text-[clamp(3rem,_10vw,_1rem)] font-black tracking-[-0.2rem] transition-all duration-300 text-center">
             Get In Touch
           </h1>
-          <p className="pb-4">Feel free to connect with me</p>
+          <p>Feel free to connect with me</p>
           <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4">
             <ul className="home-about-social-links flex space-x-4">
               <li>

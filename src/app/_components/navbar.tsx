@@ -16,7 +16,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
 
   return (
-    <nav className="w-full flex items-center justify-between fixed top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh] left-0 border-b bg-white dark:bg-slate-800 dark:border-gray-600">
+    <nav className="navbar w-full flex items-center justify-between fixed top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh] left-0 border-b bg-white dark:bg-slate-800 dark:border-gray-600">
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-8">
         <Link href="/" legacyBehavior>
           <a
@@ -31,7 +31,7 @@ const Navbar = () => {
           </a>
         </Link>
 
-        <ul className="navbar-menu hidden sm:flex flex-row items-center">
+        <ul className="navbar-menu hidden sm:flex flex-row gap-6 items-center">
           {navLinks.map((nav: NavLink) => (
             <li key={nav.id}>
               <Link href={`#${nav.id}`} legacyBehavior>
@@ -43,9 +43,7 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <li>
-            <ThemeSwitcher />
-          </li>
+          <li><ThemeSwitcher /></li>
         </ul>
 
         <div className="sm:hidden flex items-center">
@@ -87,22 +85,26 @@ const Navbar = () => {
       </div>
 
       {/* Mobile */}
-      <div className={`sm:hidden flex flex-col items-center bg-flashWhite w-full absolute top-full left-0 py-4 ${toggle ? 'block' : 'hidden'}`}>
-        {navLinks.map((nav: NavLink) => (
-          <Link key={nav.id} href={`#${nav.id}`} legacyBehavior>
-            <a
-              className={`hover:text-taupe ${active === nav.title ? 'text-french' : 'text-eerieBlack'} text-lg font-medium uppercase my-2`}
-              onClick={() => {
-                setActive(nav.title);
-                setToggle(false);
-              }}>
-              {nav.title}
-            </a>
-          </Link>
-        ))}
-      </div>
+      {toggle && (
+        <ul className="navbar-menu sm:hidden flex flex-col items-center bg-white w-full absolute top-full left-0 py-4 gap-4 dark:bg-slate-800">
+          {navLinks.map((nav: NavLink) => (
+            <li key={nav.id}>
+              <Link href={`#${nav.id}`} legacyBehavior>
+                <a
+                  className={`hover:text-taupe ${active === nav.title ? 'text-french' : 'text-eerieBlack'} text-lg font-medium uppercase my-2`}
+                  onClick={() => {
+                    setActive(nav.title);
+                    setToggle(false);
+                  }}>
+                  {nav.title}
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
-}
+};
 
 export default Navbar;

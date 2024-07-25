@@ -14,13 +14,13 @@ const About = () => {
               width={200}
               height={200}
             />
-            <p className="text-lg text-gray-700 pt-5">
+            <p className="text-lg text-gray-700 pt-5 dark:text-slate-400">
             Full-Stack Web Developer
             </p>
-            <p className="text-lg text-gray-700 pt-1">
+            <p className="text-lg text-gray-700 pt-1 dark:text-slate-400">
             Problem Solver
             </p>
-            <p className="text-lg text-gray-700 pt-1">
+            <p className="text-lg text-gray-700 pt-1 dark:text-slate-400">
             Mathematics
             </p>
           </div>
@@ -31,7 +31,7 @@ const About = () => {
               About Me
             </h1>
             <div className='About-me mb-4'>
-              <p className="text-lg text-gray-700 mb-4">
+              <p className="text-lg text-gray-700 mb-4 dark:text-slate-400">
               Enthusiastic and results-driven Full-Stack Web Developer with a solid background in mathematics and a passion for creating robust, client-focused web applications. Experienced in the complete development lifecycle, from research and planning to design, implementation, and testing. Skilled in using JavaScript, Ruby, HTML, CSS, and various testing frameworks.
               </p>
               {/* resume */}
