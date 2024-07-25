@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from 'next/link';
 import { navLinks } from '../data/menu';
 import { ThemeSwitcher } from "./theme-switcher";
+import '../styles/navbar.css';  // Import the custom CSS
 
 interface NavLink {
   id: string;
@@ -30,18 +31,22 @@ const Navbar = () => {
           </a>
         </Link>
 
-        <div className="hidden sm:flex flex-row gap-6 items-center">
+        <ul className="navbar-menu hidden sm:flex flex-row items-center">
           {navLinks.map((nav: NavLink) => (
-            <Link key={nav.id} href={`#${nav.id}`} legacyBehavior>
-              <a
-                className={`hover:text-taupe ${active === nav.title ? 'text-french' : 'text-eerieBlack'} text-lg font-medium uppercase`}
-                onClick={() => setActive(nav.title)}>
-                {nav.title}
-              </a>
-            </Link>
+            <li key={nav.id}>
+              <Link href={`#${nav.id}`} legacyBehavior>
+                <a
+                  className={`hover:text-taupe ${active === nav.title ? 'text-french' : 'text-eerieBlack'} text-lg font-medium uppercase`}
+                  onClick={() => setActive(nav.title)}>
+                  {nav.title}
+                </a>
+              </Link>
+            </li>
           ))}
-          <ThemeSwitcher />
-        </div>
+          <li>
+            <ThemeSwitcher />
+          </li>
+        </ul>
 
         <div className="sm:hidden flex items-center">
           <ThemeSwitcher />
@@ -82,22 +87,20 @@ const Navbar = () => {
       </div>
 
       {/* Mobile */}
-      {toggle && (
-        <div className="sm:hidden flex flex-col items-center bg-flashWhite w-full absolute top-full left-0 py-4">
-          {navLinks.map((nav: NavLink) => (
-            <Link key={nav.id} href={`#${nav.id}`} legacyBehavior>
-              <a
-                className={`hover:text-taupe ${active === nav.title ? 'text-french' : 'text-eerieBlack'} text-lg font-medium uppercase my-2`}
-                onClick={() => {
-                  setActive(nav.title);
-                  setToggle(false);
-                }}>
-                {nav.title}
-              </a>
-            </Link>
-          ))}
-        </div>
-      )}
+      <div className={`sm:hidden flex flex-col items-center bg-flashWhite w-full absolute top-full left-0 py-4 ${toggle ? 'block' : 'hidden'}`}>
+        {navLinks.map((nav: NavLink) => (
+          <Link key={nav.id} href={`#${nav.id}`} legacyBehavior>
+            <a
+              className={`hover:text-taupe ${active === nav.title ? 'text-french' : 'text-eerieBlack'} text-lg font-medium uppercase my-2`}
+              onClick={() => {
+                setActive(nav.title);
+                setToggle(false);
+              }}>
+              {nav.title}
+            </a>
+          </Link>
+        ))}
+      </div>
     </nav>
   );
 }
