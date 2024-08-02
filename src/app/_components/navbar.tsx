@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from 'next/link';
 import { navLinks } from '../data/menu';
 import { ThemeSwitcher } from "./theme-switcher";
-import '../styles/navbar.css';  // Import the custom CSS
+import '../styles/navbar.css';
 
 interface NavLink {
   id: string;

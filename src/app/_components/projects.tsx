@@ -1,22 +1,23 @@
 import Image from 'next/image';
 import { projects } from '../data/projects';
+import '../styles/projects.css';
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-12  pt-20 -mt-20">
+    <section id="projects" className="py-12 pt-20 -mt-20">
       <h1 className="hover:text-shadow-3 m-0 font-heading text-[clamp(3rem,_10vw,_1rem)] font-black tracking-[-0.2rem] transition-all duration-300 text-center pb-4">
         Projects
       </h1>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {projects.map((project) => (
-            <div key={project.id} className="p-6 bg-white rounded-lg shadow-md dark:bg-slate-800">
-              <div className="relative w-full h-60 mb-4 transform transition-transform duration-300 hover:scale-105">
+            <div key={project.id} className="p-6 bg-white rounded-lg shadow-md dark:bg-slate-800 highlith-text">
+              <div className="relative w-full h-60 mb-4">
                 <Image
                   src={project.image}
                   alt={project.title}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: 'cover' }}
                   className="rounded-lg"
                 />
               </div>
