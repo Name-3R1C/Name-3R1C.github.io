@@ -1,20 +1,20 @@
 .highlith-text h3 {
   position: relative;
-  color: #000;
+  color: #000 !important;
 }
 
 .highlith-text h3::before {
-  background: hsl(45, 100%, 70%);
-  content: "";
-  inset: 0;
-  position: absolute;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s ease-in-out;
-  z-index: -1;
+  background: hsl(45, 100%, 70%) !important;
+  content: "" !important;
+  inset: 0 !important;
+  position: absolute !important;
+  transform: scaleX(0) !important;
+  transform-origin: right !important;
+  transition: transform 0.5s ease-in-out !important;
+  z-index: -1 !important;
 }
 
 .highlith-text:hover h3::before {
-  transform: scaleX(1);
-  transform-origin: left;
+  transform: scaleX(1) !important;
+  transform-origin: left !important;
 }

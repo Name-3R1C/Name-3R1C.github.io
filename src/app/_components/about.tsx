@@ -8,8 +8,8 @@ const About = () => {
           {/* Headshot pic */}
           <div className="flex-shrink-0 mb-8 lg:mb-0 flex flex-col items-center pr-3 pt-4">
             <Image
-              className="rounded-full object-cover"
-              src="/assets/headshot.png"
+              className="rounded-full object-cover aspect-square"
+              src="/assets/headshot.jpg"
               alt="Biography Image"
               width={200}
               height={200}

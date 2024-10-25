@@ -3,7 +3,7 @@ const experiences = [
     title: 'Full-Stack Developer - Intern',
     company: 'FYMAB Inc.',
     description: 'Revamped LMS course layout with JavaScript and CSS to boost user engagement and data collection, processed and analyzed data using SQL and Python to develop insightful dashboards, and created an MVP in three months to support the early-stage development of gamified wellness solutions.',
-    time: 'April 2024 - June 2024',
+    time: 'April 2024 - July 2024',
   },
   {
     title: 'Full-Stack Developer - Intern',

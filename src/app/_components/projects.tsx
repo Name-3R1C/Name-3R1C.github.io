@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { projects } from '../data/projects';
-import '../styles/projects.css';
+// import '../styles/projects.css';
 
 const Projects = () => {
   return (
@@ -12,13 +12,13 @@ const Projects = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {projects.map((project) => (
             <div key={project.id} className="p-6 bg-white rounded-lg shadow-md dark:bg-slate-800 highlith-text">
-              <div className="relative w-full h-60 mb-4">
+              <div className="relative w-full h-60 mb-4 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   style={{ objectFit: 'cover' }}
-                  className="rounded-lg"
+                  className="rounded-lg object-cover transition-transform duration-300 hover:scale-110"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
